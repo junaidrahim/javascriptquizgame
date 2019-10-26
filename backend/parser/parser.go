@@ -10,12 +10,12 @@ import (
 
 // Question ,
 type Question struct {
-	number        int
-	statement     string
-	code          string
-	options       map[string]string
-	correctAnswer string
-	explanation   string
+	Number        int
+	Statement     string
+	Code          string
+	Options       map[string]string
+	CorrectAnswer string
+	Explanation   string
 }
 
 // GetQuestions returns a []Question with all the questions in it
@@ -46,12 +46,12 @@ func parseGlob(data string) []Question {
 	for questionNumber, questionBlock := range dataStringArray {
 		var q Question
 
-		q.number = questionNumber + 1
-		q.statement = getQuestionStatement(questionBlock)
-		q.code = getQuestionCode(questionBlock)
-		q.options = getQuestionOptions(questionBlock)
-		q.correctAnswer = getQuestionCorrectAnswer(questionBlock)
-		q.explanation = getQuestionExplanation(questionBlock)
+		q.Number = questionNumber + 1
+		q.Statement = getQuestionStatement(questionBlock)
+		q.Code = getQuestionCode(questionBlock)
+		q.Options = getQuestionOptions(questionBlock)
+		q.CorrectAnswer = getQuestionCorrectAnswer(questionBlock)
+		q.Explanation = getQuestionExplanation(questionBlock)
 
 		questions = append(questions, q)
 	}

@@ -3,13 +3,13 @@ package main
 import (
 	// "net/http"
 	// "github.com/labstack/echo"
-	//"fmt"
 	"javascriptquizgame/parser"
+	"fmt"
 )
 
 func main() {
-	parser.ParseGlob(parser.GetData())
-
+	questions := parser.GetQuestions()
+	
 	// e := echo.New()
 
 	// e.GET("/", func (c echo.Context) error {
