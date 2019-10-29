@@ -1,7 +1,6 @@
 package parser
 
 import (
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -103,7 +102,6 @@ func getQuestionOptions(data string) map[string]string {
 		}
 	}
 
-	fmt.Println(finalOptionsMap)
 	return finalOptionsMap
 }
 

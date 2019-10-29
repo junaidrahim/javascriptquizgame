@@ -4,12 +4,14 @@ import (
 	// "net/http"
 	// "github.com/labstack/echo"
 	"javascriptquizgame/parser"
+	"javascriptquizgame/updater"
 	"fmt"
 )
 
 func main() {
 	questions := parser.GetQuestions()
-	
+	fmt.Println(questions[10])
+	updater.ConnectDB()
 	// e := echo.New()
 
 	// e.GET("/", func (c echo.Context) error {
