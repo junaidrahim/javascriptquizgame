@@ -1,17 +1,14 @@
 package main
 
 import (
-	// "net/http"
-	// "github.com/labstack/echo"
-	"javascriptquizgame/parser"
-	"javascriptquizgame/updater"
 	"fmt"
+	"javascriptquizgame/database"
 )
 
 func main() {
-	questions := parser.GetQuestions()
-	fmt.Println(questions[10])
-	updater.ConnectDB()
+	status := database.UpdateDB()
+	fmt.Println(status)
+
 	// e := echo.New()
 
 	// e.GET("/", func (c echo.Context) error {
