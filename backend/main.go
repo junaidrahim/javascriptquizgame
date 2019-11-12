@@ -22,6 +22,6 @@ func main() {
 			return c.String(http.StatusOK, "Successfully Updated")
 		}
 	})
-	
+
 	e.Logger.Fatal(e.Start(":1200"))
 }

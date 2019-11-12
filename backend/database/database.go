@@ -10,6 +10,7 @@ import (
 )
 
 // TODO : Setup proper logging using some framework
+// TODO : Implement Error handling
 
 // UpdateDB will connect to the DB
 func UpdateDB() bool {
@@ -36,8 +37,6 @@ func UpdateDB() bool {
 
 		if err != nil {
 			fmt.Println("Error in inserting questions", err)
-		} else {
-			fmt.Println(output)
 		}
 	}
 
