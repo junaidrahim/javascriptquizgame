@@ -9,12 +9,12 @@ import (
 
 // Question ,
 type Question struct {
-	Number        int
-	Statement     string
-	Code          string
-	Options       map[string]string
-	CorrectAnswer string
-	Explanation   string
+	Number        int               `json:"number"`
+	Statement     string            `json:"statement"`
+	Code          string            `json:"code"`
+	Options       map[string]string `json:"options"`
+	CorrectAnswer string            `json:"correct_answer"`
+	Explanation   string            `json:"explanation"`
 }
 
 // GetQuestions returns a []Question with all the questions in it

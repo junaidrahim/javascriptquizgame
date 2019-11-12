@@ -45,6 +45,47 @@ func UpdateDB() bool {
 }
 
 // GetQuestions will query the database and ask for the questions
-func GetQuestions(){
+func GetQuestions() []parser.Question {
+	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
+	client, err := mongo.Connect(context.TODO(), clientOptions)
 
+	if err != nil {
+		// TODO: Log some errors
+		fmt.Println("Connection Error")
+		return nil
+	}
+
+	err = client.Ping(context.TODO(), nil);
+
+	if err != nil {
+		// TODO: Log some errors
+		fmt.Println("Ping error")
+		return nil
+	}
+
+	questionsDB := client.Database("javascriptquizgame").Collection("questions")
+	questionsCursor, err := questionsDB.Find(context.TODO(), bson.D{})
+
+	if err != nil {
+		// TODO : log some errors
+		fmt.Println("Find error")
+		return nil
+	}
+
+	var q []parser.Question
+
+	for questionsCursor.Next(context.TODO()) {
+		var question parser.Question
+		err = questionsCursor.Decode(&question)
+
+		q = append(q, question)
+	}
+
+	err = client.Disconnect(context.TODO())
+
+	if err != nil {
+		fmt.Println("Disconnection Error")
+	}
+
+	return q
 }
