@@ -1,22 +1,49 @@
-.App {
-  text-align: center;
+.App .title-header {
+  font-family: "Roboto Mono", monospace;
 }
 
-.App-logo {
-  height: 40vmin;
+.App .title-header h1 {
+  font-size: 7rem;
+  margin-top: 2rem;
+  padding-left: 3rem;
+  padding-right: 2rem;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .title-header .dot {
+  color: red;
 }
 
-.App-link {
-  color: #09d3ac;
+.App .content {
+  font-family: "Roboto Mono", monospace;
+  padding-left: 3rem;
+  font-size: 1.5rem;
+}
+
+.App .button-container button{
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 800px){
+  .App .title-header h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .App .title-header h1 {
+    font-size: 3rem;
+    padding-left: 1.6rem;
+    padding-right: 1rem;
+  }
+
+  .App .content {
+    font-size: 1.2rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .App .button-container button {
+    margin-left: 1.6rem;
+  }
 }

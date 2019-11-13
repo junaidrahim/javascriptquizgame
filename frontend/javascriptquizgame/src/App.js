@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <div className="title-header">
+        <h1>the <br></br> javascript <br></br> quiz<span className="dot">.</span></h1>
+      </div>
+      <div className="content">
+        <br></br>
+        <p>Just a gamified version of the
+          javascript questions by <a href="https://github.com/lydiahallie/javascript-questions">Lydia Halie</a> <br></br>
+          A project by Junaid Rahim
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <br></br>
+      </div>
+      <div className="button-container">
+        <button className="btn btn-danger btn-lg">Start Playing</button>
+      </div>
     </div>
   );
 }
