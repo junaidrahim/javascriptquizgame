@@ -2,12 +2,16 @@ package main
 
 import (
 	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 	"javascriptquizgame/database"
 	"net/http"
 )
 
+// TODO : set error handling if the database is not started
+
 func main() {
 	e := echo.New()
+	e.Use(middleware.CORS())
 
 	e.GET("/api/getQuestions", func (c echo.Context) error {
 		q := database.GetQuestions()

@@ -1,0 +1,49 @@
+.home .title-header {
+    font-family: "Roboto Mono", monospace;
+}
+  
+.home .title-header h1 {
+    font-size: 7rem;
+    margin-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    font-weight: 700;
+}
+  
+.home .title-header .dot {
+    color: red;
+}
+  
+.home .content {
+    font-family: "Roboto Mono", monospace;
+    padding-left: 3rem;
+    font-size: 1.5rem;
+}
+  
+.home .button-container button{
+    margin-left: 3rem;
+}
+  
+@media screen and (max-width: 800px){
+    .home .title-header h1 {
+        font-size: 5rem;
+    }
+}
+  
+@media screen and (max-width: 450px){
+    .home .title-header h1 {
+        font-size: 3rem;
+        padding-left: 1.6rem;
+        padding-right: 1rem;
+    }
+  
+    .home .content {
+        font-size: 1.2rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+  
+    .home .button-container button {
+        margin-left: 1.6rem;
+    }
+}

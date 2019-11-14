@@ -33,7 +33,7 @@ func UpdateDB() bool {
 	_, err = questionsDB.DeleteMany(context.TODO(), bson.M{})
 
 	for _, q := range questions {
-		output ,err := questionsDB.InsertOne(context.TODO(), q)
+		_ ,err := questionsDB.InsertOne(context.TODO(), q)
 
 		if err != nil {
 			fmt.Println("Error in inserting questions", err)
