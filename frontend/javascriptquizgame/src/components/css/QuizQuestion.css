@@ -1,0 +1,15 @@
+.questionCard {
+    margin: 1rem;
+}
+
+.questionCard .statement {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.questionCard .statement .number {
+    font-size: 1rem;
+}
+
+.questionCard .code {
+    background-color: #f5f5f5;
+}

@@ -1,0 +1,10 @@
+.questionContainer {
+    width: 40%;
+    margin: auto;
+}
+
+@media screen and (max-width: 700px){
+    .questionContainer {
+        width: 100%;
+    }
+}

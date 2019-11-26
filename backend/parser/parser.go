@@ -25,7 +25,7 @@ func GetQuestions() []Question {
 
 // getData will fetch data from the readme file and return it as a string
 func getData() string {
-	response, err := http.Get("https://rawcdn.githack.com/lydiahallie/javascript-questions/13b42090852a397f878da569cdd762bbd610f73f/en-EN/README.md")
+	response, err := http.Get("https://raw.githack.com/lydiahallie/javascript-questions/master/en-EN/README.md")
 
 	if err != nil {
 		log.Fatal(err)
