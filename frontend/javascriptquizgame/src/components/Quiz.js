@@ -52,6 +52,7 @@ export class Quiz extends Component {
                 <div>
                     <div>
                         <h1>Your total score is {this.totalScore}</h1>
+                        <button className="btn btn-danger" onClick={() => document.location.reload()}>Play Again</button>
                     </div>
                 </div>
             )
@@ -69,7 +70,7 @@ export class Quiz extends Component {
 
                         <div style={{textAlign: 'center'}}>
                             <br></br>
-                            <button className="btn btn-dark btn-lg" onClick={this.endQuiz}>END GAME</button>
+                            <button className="btn btn-dark btn-lg" onClick={this.endQuiz}>End Game</button>
                         </div>
                     </div>
 
