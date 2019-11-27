@@ -141,3 +141,49 @@
 2019/11/27 20:22:20 error parsing uri: lookup javascriptquizgame-s4ih7.mongodb.net on 127.0.0.53:53: cannot unmarshal DNS message
 2019/11/27 20:22:20 database.go : Database Connection Error
 2019/11/27 20:22:20 Database Error Occurred
+2019/11/27 20:26:17 
+
+
+2019/11/27 20:26:17 Starting Database
+2019/11/27 20:26:24 Starting Database Update
+2019/11/27 20:26:26 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:26:26 database.go : Database Ping Error
+2019/11/27 20:26:26 Database Error Occurred
+2019/11/27 20:26:44 Starting Database Update
+2019/11/27 20:26:45 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:26:45 database.go : Database Ping Error
+2019/11/27 20:26:45 Database Error Occurred
+2019/11/27 20:26:51 
+
+
+2019/11/27 20:26:51 Starting Database
+2019/11/27 20:26:57 Starting Database Update
+2019/11/27 20:26:58 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:26:58 database.go : Database Ping Error
+2019/11/27 20:26:58 Database Error Occurred
+2019/11/27 20:27:36 
+
+
+2019/11/27 20:27:36 Starting Database
+2019/11/27 20:27:51 Starting Database Update
+2019/11/27 20:27:54 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:27:54 database.go : Database Ping Error
+2019/11/27 20:27:54 Database Error Occurred
+2019/11/27 20:28:39 
+
+
+2019/11/27 20:28:39 Starting Database
+2019/11/27 20:28:45 Starting Database Update
+2019/11/27 20:28:52 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:28:52 database.go : Database Ping Error
+2019/11/27 20:28:52 Database Error Occurred
+2019/11/27 20:30:43 
+
+
+2019/11/27 20:30:43 Starting Database
+2019/11/27 20:30:49 
+
+
+2019/11/27 20:30:49 Starting Database
+2019/11/27 20:31:17 Starting Database Update
+2019/11/27 20:31:33 Updated Database Successfully

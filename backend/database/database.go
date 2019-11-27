@@ -19,6 +19,7 @@ func UpdateDB() bool {
 	// Don't forget to make a password file key
 	var pw string = getPassword("database/db_password.key")
 	uri := "mongodb+srv://junaid:" + pw + "@javascriptquizgame-s4ih7.mongodb.net/test?retryWrites=true&w=majority"
+	
 
 	clientOptions := options.Client().ApplyURI(uri)
 	client, err := mongo.Connect(context.TODO(), clientOptions)
