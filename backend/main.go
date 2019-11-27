@@ -1,12 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"javascriptquizgame/database"
 	"javascriptquizgame/logger"
 	"net/http"
-	"fmt"
 	"os"
 )
 
