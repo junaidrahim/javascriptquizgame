@@ -42,5 +42,5 @@ func main() {
 		}
 	})
 
-	e.Logger.Fatal(e.Start(":1200"))
+	e.Logger.Fatal(e.Start(""))
 }
