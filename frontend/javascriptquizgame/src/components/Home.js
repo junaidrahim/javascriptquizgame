@@ -32,9 +32,9 @@ export class Home extends Component {
                     <div className="content">
                         <br></br>
                         <p>Just a gamified version of the
-                        javascript questions by <a target="_blank" href="https://github.com/lydiahallie/javascript-questions">Lydia Halie</a> <br></br>
+                        javascript questions by <a target="_blank" rel="noopener noreferrer" href="https://github.com/lydiahallie/javascript-questions">Lydia Halie</a> <br></br>
                         A project by Junaid Rahim. <br></br>
-                        <a style={{fontSize: '0.8rem'}} target="_blank" href="https://github.com/junaidrahim/javascriptquizgame">Star this on GitHub</a>
+                        <a style={{fontSize: '0.8rem'}} target="_blank" rel="noopener noreferrer" href="https://github.com/junaidrahim/javascriptquizgame">Star this on GitHub</a>
                         </p>
                         <br></br>
                     </div>
