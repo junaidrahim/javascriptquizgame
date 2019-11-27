@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="723ef76d-b561-4319-9030-bc45cd660bc4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascriptquizgame" beforeDir="false" afterPath="$PROJECT_DIR$/javascriptquizgame" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/parser.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/javascriptquizgame/src/components/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/javascriptquizgame/src/components/Quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/javascriptquizgame/src/components/QuizQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/javascriptquizgame/src/components/QuizQuestion.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

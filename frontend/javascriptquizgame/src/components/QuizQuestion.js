@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Highlight from 'react-highlight.js'
+import  { Markdown } from 'react-showdown'
 
 import './css/QuizQuestion.css'
 
@@ -7,17 +8,20 @@ export class QuizQuestion extends Component {
 
     submitAnswer = (answer) => {
         if (answer === this.props.question.correct_answer) {
+            // Display the alert for correct  & increment score
             document.getElementById('correctAnswerAlert').style.display = 'block'
             this.props.incrementScore()
         } else {
+            // Display the alert for wrong answer
             document.getElementById('wrongAnswerAlert').style.display = 'block'
         }
         
-        setTimeout(() => {
+        this.displayExplanation()
+
+        setTimeout(() => { // Hide the prompts
             document.getElementById('correctAnswerAlert').style.display = 'none'
             document.getElementById('wrongAnswerAlert').style.display = 'none'
-            this.props.setNextQuestion()
-        }, 1000);
+        }, 6000);
     }
 
     fillOptions = (options) => {
@@ -43,6 +47,15 @@ export class QuizQuestion extends Component {
 
         return optionsHTML
     }
+
+    displayExplanation = () => {
+        document.getElementById("questionExplanation").style.display = 'block';
+    }
+
+    hideExplanation = () => {
+        document.getElementById("questionExplanation").style.display = 'none';
+    }
+
 
     render(){
         if(this.props.question !== undefined) {
@@ -71,6 +84,16 @@ export class QuizQuestion extends Component {
                             <Highlight language="javascript">{this.props.question.code}</Highlight>
                         </div>
                         { this.fillOptions(this.props.question.options) }
+                    </div>
+
+                    <div className="questionExplanation" id="questionExplanation">
+                        <br></br>
+                        <Markdown markup={ this.props.question.explanation }></Markdown>
+                        <br></br>
+                        <button onClick={ () => {this.hideExplanation(); this.props.setNextQuestion()}} className="btn btn-sm btn-warning">
+                            Next Question
+                        </button>
+
                     </div>
                 </div>
             )

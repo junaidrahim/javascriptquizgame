@@ -50,9 +50,11 @@ export class Quiz extends Component {
         if(this.state.endQuiz){
             return(
                 <div>
-                    <div>
+                    <div className="scoreContainer">
                         <h1>Your total score is {this.totalScore}</h1>
-                        <button className="btn btn-danger" onClick={() => document.location.reload()}>Play Again</button>
+                        <div style={{textAlign: 'center'}}>
+                            <button className="btn btn-danger" onClick={() => document.location.reload()}>Play Again</button>
+                        </div>
                     </div>
                 </div>
             )
@@ -70,7 +72,9 @@ export class Quiz extends Component {
 
                         <div style={{textAlign: 'center'}}>
                             <br></br>
-                            <button className="btn btn-dark btn-lg" onClick={this.endQuiz}>End Game</button>
+                            <button className="btn btn-dark btn-sm" onClick={this.endQuiz}>End Game</button>
+                            <br></br>
+                            <br></br>
                         </div>
                     </div>
 
