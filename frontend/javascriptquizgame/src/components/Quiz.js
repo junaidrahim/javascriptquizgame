@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import QuizQuestion from './QuizQuestion'
+import Loader from 'react-loader-spinner'
 
 import './css/Quiz.css'
 
@@ -8,7 +9,8 @@ export class Quiz extends Component {
     state = {
         data: {},
         currentQuestion: 0,
-        endQuiz : 0
+        endQuiz : 0,
+        spinnerLoading: true
     }
 
     totalScore = 0;
@@ -37,11 +39,13 @@ export class Quiz extends Component {
 
     componentDidMount = () => {
         //console.log("Getting questions")
-        fetch("http://192.168.43.44:1200/api/getQuestions")
+        fetch("https://dry-fortress-83905.herokuapp.com/api/getQuestions")
             .then(res => res.json())
             .then((json) => {
-                this.setState({data: json})
-                //console.log(json)
+                this.setState({
+                    data: json,
+                    spinnerLoading: false
+                })
             })
             .catch(err => {
                 alert("Server Unavailable, Please try again later")
@@ -72,6 +76,17 @@ export class Quiz extends Component {
                             incrementScore={this.incrementScore} 
                             setNextQuestion={this.setNextQuestion}>
                         </QuizQuestion>
+
+                        <div style={{ textAlign: 'center' }}>
+                            <br></br>
+                            <Loader
+                                type="Puff"
+                                color="#00BFFF"
+                                height={50}
+                                width={50}
+                                visible={this.state.spinnerLoading}
+                            />
+                        </div>
 
                         <div style={{textAlign: 'center'}}>
                             <br></br>

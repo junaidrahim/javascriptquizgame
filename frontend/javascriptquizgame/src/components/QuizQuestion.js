@@ -21,7 +21,7 @@ export class QuizQuestion extends Component {
         setTimeout(() => { // Hide the prompts
             document.getElementById('correctAnswerAlert').style.display = 'none'
             document.getElementById('wrongAnswerAlert').style.display = 'none'
-        }, 6000);
+        }, 2000);
     }
 
     fillOptions = (options) => {
