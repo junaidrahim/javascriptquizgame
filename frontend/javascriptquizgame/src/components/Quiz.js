@@ -17,7 +17,6 @@ export class Quiz extends Component {
 
     incrementScore = () => {
         this.totalScore += 1
-        console.log(this.totalScore)
     }
 
     setNextQuestion = () => {
@@ -31,14 +30,12 @@ export class Quiz extends Component {
     }
 
     endQuiz = () => {
-        console.log("end quiz ran")
         this.setState({
             endQuiz : 1
         })
     }
 
     componentDidMount = () => {
-        //console.log("Getting questions")
         fetch("https://dry-fortress-83905.herokuapp.com/api/getQuestions")
             .then(res => res.json())
             .then((json) => {

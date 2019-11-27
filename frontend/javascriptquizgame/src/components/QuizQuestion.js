@@ -6,15 +6,22 @@ import './css/QuizQuestion.css'
 
 export class QuizQuestion extends Component {
 
+    alreadySubmitted = 0
+
     submitAnswer = (answer) => {
         if (answer === this.props.question.correct_answer) {
             // Display the alert for correct  & increment score
             document.getElementById('correctAnswerAlert').style.display = 'block'
-            this.props.incrementScore()
+            
+            if(this.alreadySubmitted === 0){
+                this.props.incrementScore()
+            }
         } else {
             // Display the alert for wrong answer
             document.getElementById('wrongAnswerAlert').style.display = 'block'
         }
+
+        this.alreadySubmitted = 1
         
         this.displayExplanation()
 
@@ -59,8 +66,7 @@ export class QuizQuestion extends Component {
 
     render(){
         if(this.props.question !== undefined) {
-            console.log(this.props.question)
-
+            
             return (
                 <div>
                     <div id="correctAnswerAlert" style={{display: 'none'}}>

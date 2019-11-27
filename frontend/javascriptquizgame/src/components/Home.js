@@ -10,7 +10,6 @@ export class Home extends Component {
     }
 
     displayQuiz = () => {
-        console.log("Display quiz clicked");
         this.setState({
             showQuiz: true
         })
