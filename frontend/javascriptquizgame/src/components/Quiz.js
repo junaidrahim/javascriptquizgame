@@ -43,6 +43,9 @@ export class Quiz extends Component {
                 this.setState({data: json})
                 //console.log(json)
             })
+            .catch(err => {
+                alert("Server Unavailable, Please try again later")
+            })
     }
 
     
