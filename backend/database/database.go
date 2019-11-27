@@ -58,7 +58,8 @@ func UpdateDB() bool {
 
 // GetQuestions will query the database and ask for the questions
 func GetQuestions() []parser.Question {
-	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
+	const uri = "mongodb+srv://junaid:80JRKeD7vEmrOqgw@javascriptquizgame-s4ih7.mongodb.net/test?retryWrites=true&w=majority"
+	clientOptions := options.Client().ApplyURI(uri)
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 
 	if err != nil {
