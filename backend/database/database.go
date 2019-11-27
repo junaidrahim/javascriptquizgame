@@ -2,15 +2,13 @@ package database
 
 import (
 	"context"
-	"fmt"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"javascriptquizgame/parser"
+	"javascriptquizgame/logger"
 )
 
-// TODO : Setup proper logging using some framework
-// TODO : Implement Error handling
 
 // UpdateDB will connect to the DB
 func UpdateDB() bool {
@@ -19,11 +17,13 @@ func UpdateDB() bool {
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 
 	if err != nil {
+		logger.WriteLog("database.go : Database Connection Error")
 		return false
 	}
 
 	err = client.Ping(context.TODO(), nil)
 	if err != nil {
+		logger.WriteLog("database.go : Database Ping Error")
 		return false
 	}
 
@@ -32,11 +32,15 @@ func UpdateDB() bool {
 
 	_, err = questionsDB.DeleteMany(context.TODO(), bson.M{})
 
+	if err != nil {
+		logger.WriteLog("database.go : Bulk Deletion Error")
+	}
+
 	for _, q := range questions {
 		_ ,err := questionsDB.InsertOne(context.TODO(), q)
 
 		if err != nil {
-			fmt.Println("Error in inserting questions", err)
+			logger.WriteLog("database.go : Insertion Error")
 		}
 	}
 
@@ -49,16 +53,14 @@ func GetQuestions() []parser.Question {
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 
 	if err != nil {
-		// TODO: Log some errors
-		fmt.Println("Connection Error")
+		logger.WriteLog("database.go : Database Connection Error")
 		return nil
 	}
 
 	err = client.Ping(context.TODO(), nil);
 
 	if err != nil {
-		// TODO: Log some errors
-		fmt.Println("Ping error")
+		logger.WriteLog("database.go : Database Ping Error")
 		return nil
 	}
 
@@ -66,8 +68,7 @@ func GetQuestions() []parser.Question {
 	questionsCursor, err := questionsDB.Find(context.TODO(), bson.D{})
 
 	if err != nil {
-		// TODO : log some errors
-		fmt.Println("Find error")
+		logger.WriteLog("database.go : Question Find Error")
 		return nil
 	}
 
@@ -83,7 +84,7 @@ func GetQuestions() []parser.Question {
 	err = client.Disconnect(context.TODO())
 
 	if err != nil {
-		fmt.Println("Disconnection Error")
+		logger.WriteLog("database.go : Database Disconnection Error")
 	}
 
 	return q
