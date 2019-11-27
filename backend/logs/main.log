@@ -62,3 +62,82 @@
 
 
 2019/11/27 19:53:02 Starting Database
+2019/11/27 20:04:30 
+
+
+2019/11/27 20:04:30 Starting Database
+2019/11/27 20:04:39 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:04:39 database.go : Database Ping Error
+2019/11/27 20:06:08 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:06:08 database.go : Database Ping Error
+2019/11/27 20:06:40 
+
+
+2019/11/27 20:06:40 Starting Database
+2019/11/27 20:06:50 connection() : auth error: sasl conversation error: unable to authenticate using mechanism "SCRAM-SHA-1": (AtlasError) bad auth Authentication failed.
+2019/11/27 20:06:50 database.go : Database Ping Error
+2019/11/27 20:07:53 
+
+
+2019/11/27 20:07:53 Starting Database
+2019/11/27 20:08:08 
+
+
+2019/11/27 20:08:08 Starting Database
+2019/11/27 20:08:47 
+
+
+2019/11/27 20:08:47 Starting Database
+2019/11/27 20:10:51 
+
+
+2019/11/27 20:10:51 Starting Database
+2019/11/27 20:11:46 
+
+
+2019/11/27 20:11:46 Starting Database
+2019/11/27 20:12:27 
+
+
+2019/11/27 20:12:27 Starting Database
+2019/11/27 20:14:39 
+
+
+2019/11/27 20:14:39 Starting Database
+2019/11/27 20:16:43 
+
+
+2019/11/27 20:16:43 Starting Database
+2019/11/27 20:17:55 
+
+
+2019/11/27 20:17:55 Starting Database
+2019/11/27 20:18:06 
+
+
+2019/11/27 20:18:06 Starting Database
+2019/11/27 20:18:22 error parsing uri: lookup javascriptquizgame-s4ih7.mongodb.net on 127.0.0.53:53: cannot unmarshal DNS message
+2019/11/27 20:18:22 database.go : Database Connection Error
+2019/11/27 20:19:09 
+
+
+2019/11/27 20:19:09 Starting Database
+2019/11/27 20:19:55 
+
+
+2019/11/27 20:19:55 Starting Database
+2019/11/27 20:20:02 Database Password File is missing
+2019/11/27 20:21:08 
+
+
+2019/11/27 20:21:08 Starting Database
+2019/11/27 20:21:22 Starting Database Update
+2019/11/27 20:21:22 Database Password File is missing
+2019/11/27 20:22:08 
+
+
+2019/11/27 20:22:08 Starting Database
+2019/11/27 20:22:20 Starting Database Update
+2019/11/27 20:22:20 error parsing uri: lookup javascriptquizgame-s4ih7.mongodb.net on 127.0.0.53:53: cannot unmarshal DNS message
+2019/11/27 20:22:20 database.go : Database Connection Error
+2019/11/27 20:22:20 Database Error Occurred

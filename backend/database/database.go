@@ -17,7 +17,7 @@ func UpdateDB() bool {
 	// Set client options
 
 	// Don't forget to make a password file key
-	var pw string = getPassword("db_password.key")
+	var pw string = getPassword("database/db_password.key")
 	uri := "mongodb+srv://junaid:" + pw + "@javascriptquizgame-s4ih7.mongodb.net/test?retryWrites=true&w=majority"
 
 	clientOptions := options.Client().ApplyURI(uri)
@@ -64,7 +64,11 @@ func UpdateDB() bool {
 
 // GetQuestions will query the database and ask for the questions
 func GetQuestions() []parser.Question {
-	const uri = "mongodb+srv://junaid:80JRKeD7vEmrOqgw@javascriptquizgame-s4ih7.mongodb.net/test?retryWrites=true&w=majority"
+
+	// Don't forget to make a password file key
+	var pw = getPassword("database/db_password.key")
+	uri := "mongodb+srv://junaid:" + pw + "@javascriptquizgame-s4ih7.mongodb.net/test?retryWrites=true&w=majority"
+
 	clientOptions := options.Client().ApplyURI(uri)
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 
@@ -118,8 +122,8 @@ func getPassword(filename string) string {
 	f, err := ioutil.ReadFile(filename)
 
 	if err != nil {
-		log.Fatal("Database Password File is missing")
 		logger.WriteLog("Database Password File is missing")
+		log.Fatal("Database Password File is missing")
 	}
 
 	return string(f)
