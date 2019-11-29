@@ -18,6 +18,7 @@ The API serves up json to the frontend when requested. The database is updated o
 ## More ideas ?
 If you have any ideas to improve this game, feel free to add issues and open PR's
 
+<br></br>
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-go.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
