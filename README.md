@@ -16,7 +16,7 @@ The API serves up json to the frontend when requested. The database is updated o
 
 
 ## More ideas ?
-If you have any ideas to improve this game, feel free to add issues and open PR's
+If you have any ideas to improve this game, feel free to add issues and open PR's ✌🏻
 
 <br></br>
 
