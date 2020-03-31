@@ -20,4 +20,3 @@
 ```
 
 run `go build` to build the binary
-push subtree to heroku to deploy
