@@ -2,6 +2,7 @@
 
 Live at [javascriptquizgame.wtf](https://javascriptquizgame.wtf/) 🥳
 
+
 ## What is this ?
 It's just a simple gamified version of the Javascript Questions by [Lydia Hallie](https://github.com/lydiahallie).
 You can find her questions [here](https://github.com/lydiahallie/javascript-questions). 
