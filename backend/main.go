@@ -42,6 +42,5 @@ func main() {
 		}
 	})
 
-	port := 8000
-	e.Logger.Fatal(e.Start(":" + string(port)))
+	e.Logger.Fatal(e.Start(":8000"))
 }
