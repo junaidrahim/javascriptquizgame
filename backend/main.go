@@ -7,7 +7,6 @@ import (
 	"javascriptquizgame/database"
 	"javascriptquizgame/logger"
 	"net/http"
-	"os"
 )
 
 func main() {
@@ -43,6 +42,6 @@ func main() {
 		}
 	})
 
-	port := os.Getenv("PORT")
+	port := 8000
 	e.Logger.Fatal(e.Start(":" + string(port)))
 }

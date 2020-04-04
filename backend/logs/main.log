@@ -213,3 +213,15 @@
 
 
 2020/03/31 19:31:41 Starting Database
+2020/04/04 17:09:17 
+
+
+2020/04/04 17:09:17 Starting Database
+2020/04/04 17:09:39 error parsing uri: lookup javascriptquizgame-s4ih7.mongodb.net on 127.0.0.53:53: cannot unmarshal DNS message
+2020/04/04 17:09:39 database.go : Database Connection Error
+2020/04/04 17:28:11 
+
+
+2020/04/04 17:28:11 Starting Database
+2020/04/04 17:28:34 error parsing uri: lookup javascriptquizgame-s4ih7.mongodb.net on 127.0.0.53:53: cannot unmarshal DNS message
+2020/04/04 17:28:34 database.go : Database Connection Error
